@@ -93,11 +93,11 @@ module.exports = async function handler(req, res) {
     return json(res, 400, { ok: false, error: "必須項目を確認してください。" });
   }
 
-  const to = process.env.CONTACT_TO_EMAIL;
-  const from = process.env.CONTACT_FROM_EMAIL;
+  const to = process.env.CONTACT_TO_EMAIL || "info@medixus.co.jp";
+  const from = process.env.CONTACT_FROM_EMAIL || to;
   const region = process.env.SES_REGION || process.env.AWS_REGION || "ap-northeast-1";
 
-  if (!to || !from) {
+  if (!process.env.AWS_ACCESS_KEY_ID || !process.env.AWS_SECRET_ACCESS_KEY) {
     return json(res, 503, { ok: false, error: "フォームの送信設定が未完了です。" });
   }
 
