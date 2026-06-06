@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ｜株式会社Medixus</title>
+<meta name="description" content="株式会社Medixusへのお問い合わせ。事業相談・Medixus OS導入・医療機関連携・採用に関するご連絡を承っています。">
+<link rel="icon" href="assets/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&family=Noto+Serif+JP:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Medixus"><img src="assets/logo-h.png" alt="Medixus"></a>
+    <nav class="nav-links">
+      <a href="company.html">私たちについて</a>
+      <a href="business.html">事業内容</a>
+      <a href="business.html#os">Medixus OS</a>
+      <a href="recruit.html">採用情報</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary btn-sm active">お問い合わせ<span class="arr">→</span></a>
+      <button class="menu-btn" aria-label="メニューを開く"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="company.html">私たちについて<span class="en">ABOUT</span></a>
+  <a href="business.html">事業内容<span class="en">BUSINESS</span></a>
+  <a href="business.html#os">Medixus OS<span class="en">PRODUCT</span></a>
+  <a href="recruit.html">採用情報<span class="en">CAREERS</span></a>
+  <a href="contact.html" class="btn btn-primary">お問い合わせ<span class="arr">→</span></a>
+</div>
+
+<main>
+
+<section class="phero">
+  <div class="wrap">
+    <div class="crumb reveal"><a href="index.html">ホーム</a><span class="sep">／</span><span>お問い合わせ</span></div>
+    <span class="en reveal">Contact</span>
+    <h1 class="reveal reveal-d1">お問い合わせ。</h1>
+    <p class="lead reveal reveal-d2">事業のご相談、Medixus OSの導入、医療機関・医師の連携、採用に関するお問い合わせまで。下記フォームよりお気軽にご連絡ください。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2 class="h3" style="margin:18px 0 8px">2〜3営業日以内に<br>ご返信します。</h2>
+      <p class="muted" style="font-size:.92rem;font-family:var(--sans)">いただいた内容を確認のうえ、担当者よりご連絡いたします。</p>
+      <div class="info-blk"><div class="lbl">本社所在地</div><p>〒252-0303<br>神奈川県相模原市南区相模大野7-15-4<br>Monte rosa 相模大野 105</p></div>
+      <div class="info-blk"><div class="lbl">お問い合わせ種別</div><p>事業・Medixus OS導入のご相談<br>医師・医療法人の連携<br>採用・カジュアル面談のご希望<br>取材・その他</p></div>
+      <div class="info-blk"><div class="lbl">採用について</div><p>募集ポジションは <a href="recruit.html" class="tlink" style="display:inline-flex">採用情報<span class="arr">→</span></a> をご覧ください。</p></div>
+    </div>
+
+    <div class="form-card reveal reveal-d1">
+      <form data-fakeform novalidate>
+        <div class="form-fields">
+          <div class="field-row">
+            <div class="field"><label>お名前 <span class="req">必須</span></label><input type="text" name="name" placeholder="医療 太郎" required></div>
+            <div class="field"><label>会社名・医療機関名</label><input type="text" name="company" placeholder="株式会社○○ / ○○クリニック"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>メールアドレス <span class="req">必須</span></label><input type="email" name="email" placeholder="you@example.com" required></div>
+            <div class="field"><label>電話番号</label><input type="tel" name="tel" placeholder="03-0000-0000"></div>
+          </div>
+          <div class="field"><label>お問い合わせ種別 <span class="req">必須</span></label>
+            <select name="type" required>
+              <option value="" selected disabled>選択してください</option>
+              <option>事業・Medixus OS 導入のご相談</option>
+              <option>医師・医療法人の連携について</option>
+              <option>採用・カジュアル面談のご希望</option>
+              <option>取材・メディアの方</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div class="field"><label>お問い合わせ内容 <span class="req">必須</span></label><textarea name="message" placeholder="ご相談内容をご記入ください。" required></textarea></div>
+          <label class="consent"><input type="checkbox" required><span><a href="#" class="tlink" style="display:inline">プライバシーポリシー</a>に同意のうえ送信します。</span></label>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">送信する<span class="arr">→</span></button>
+          <p class="muted" style="font-size:.76rem;text-align:center;margin-top:16px;font-family:var(--sans)">※ こちらはデモ用フォームです。実際には送信されません。</p>
+        </div>
+        <div class="form-done">
+          <div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>送信ありがとうございました</h3>
+          <p>内容を確認のうえ、2〜3営業日以内に担当者よりご連絡いたします。</p>
+          <div class="actions center mt-m"><a href="index.html" class="btn btn-ghost">トップへ戻る<span class="arr">→</span></a></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand"><img src="assets/logo-h-white.png" alt="Medixus"><p>患者を最短で適切な医療につなぐ、AI前提の医療アクセスOSとクリニック運営フォーマットを提供します。</p></div>
+      <div class="footer-col"><h4>Company</h4><a href="company.html">私たちについて</a><a href="company.html#message">代表メッセージ</a><a href="company.html#team">経営チーム</a><a href="company.html#overview">会社概要</a></div>
+      <div class="footer-col"><h4>Business</h4><a href="business.html">事業内容</a><a href="business.html#os">Medixus OS</a><a href="business.html#other">その他の事業</a><a href="recruit.html">採用情報</a></div>
+      <div class="footer-col"><h4>Contact</h4><a href="contact.html">お問い合わせ</a><a href="recruit.html">採用エントリー</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span data-year>2026</span> Medixus, Inc. All rights reserved.</span><div class="links"><a href="#">プライバシーポリシー</a><a href="#">利用規約</a></div></div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
