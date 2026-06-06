@@ -132,7 +132,7 @@
       data.consent = !!form.querySelector("[name=consent]:checked");
 
       try {
-        var res = await fetch(form.getAttribute("action") || "/api/contact", {
+        var res = await fetch(form.getAttribute("action") || "https://efqe37dbah6kfsrxffzwfxfwei0sfthe.lambda-url.ap-northeast-1.on.aws/", {
           method: "POST",
           headers: { "Content-Type": "application/json", "Accept": "application/json" },
           body: JSON.stringify(data)
