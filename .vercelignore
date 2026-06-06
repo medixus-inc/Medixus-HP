@@ -2,3 +2,8 @@
 .thumbnail
 uploads/
 assets/hero-medixus-os.png
+node_modules/
+.env
+.env.local
+.env.development
+.env.production

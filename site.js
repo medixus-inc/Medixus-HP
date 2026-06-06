@@ -101,18 +101,60 @@
     }, { passive: true });
   }
 
-  /* ---- Fake form submit ---- */
-  var form = document.querySelector("[data-fakeform]");
+  /* ---- Contact form submit ---- */
+  var form = document.querySelector("[data-contact-form]");
   if (form) {
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
-      var btn = form.querySelector("[type=submit]"), done = form.querySelector(".form-done");
-      if (btn) { btn.disabled = true; btn.textContent = "送信中…"; }
-      setTimeout(function () {
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      var btn = form.querySelector("[type=submit]");
+      var done = form.querySelector(".form-done");
+      var status = form.querySelector(".form-status");
+      var btnHtml = btn ? btn.innerHTML : "";
+
+      if (status) {
+        status.className = "form-status";
+        status.textContent = "";
+      }
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = "送信中…";
+      }
+
+      var data = {};
+      new FormData(form).forEach(function (value, key) {
+        data[key] = value;
+      });
+      data.consent = !!form.querySelector("[name=consent]:checked");
+
+      try {
+        var res = await fetch(form.getAttribute("action") || "/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(data)
+        });
+        var json = await res.json().catch(function () { return {}; });
+        if (!res.ok || !json.ok) {
+          throw new Error(json.error || "送信に失敗しました。時間をおいて再度お試しください。");
+        }
+
         form.querySelector(".form-fields").style.display = "none";
         if (done) done.classList.add("show");
         window.scrollTo({ top: form.getBoundingClientRect().top + window.scrollY - 130, behavior: "smooth" });
-      }, 900);
+      } catch (err) {
+        if (status) {
+          status.className = "form-status error";
+          status.textContent = err.message || "送信に失敗しました。時間をおいて再度お試しください。";
+        }
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = btnHtml;
+        }
+      }
     });
   }
 

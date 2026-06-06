@@ -1,0 +1,11 @@
+{
+  "name": "medixus-hp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "vercel-build": "echo \"Static site\""
+  },
+  "dependencies": {
+    "@aws-sdk/client-sesv2": "^3.826.0"
+  }
+}

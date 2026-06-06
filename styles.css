@@ -252,6 +252,9 @@ p:last-child { margin-bottom: 0; }
 .field input:focus, .field select:focus, .field textarea:focus { outline:none; border-color: var(--brand); background:#fff; box-shadow: 0 0 0 4px rgba(31,111,212,.1); }
 .field-row { display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 @media (max-width: 620px){ .field-row { grid-template-columns: 1fr; } }
+.hp-field { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
+.form-status { min-height: 1.4em; margin-top: 16px; text-align:center; font-family: var(--sans); font-size:.82rem; color: var(--muted); }
+.form-status.error { color: #b42318; }
 
 /* ---------- Utility ---------- */
 .center { text-align:center; }

@@ -59,8 +59,12 @@
     </div>
 
     <div class="form-card reveal reveal-d1">
-      <form data-fakeform novalidate>
+      <form data-contact-form action="/api/contact" method="post" novalidate>
         <div class="form-fields">
+          <div class="hp-field" aria-hidden="true">
+            <label>Webサイト</label>
+            <input type="text" name="website" tabindex="-1" autocomplete="off">
+          </div>
           <div class="field-row">
             <div class="field"><label>お名前 <span class="req">必須</span></label><input type="text" name="name" placeholder="医療 太郎" required></div>
             <div class="field"><label>会社名・医療機関名</label><input type="text" name="company" placeholder="株式会社○○ / ○○クリニック"></div>
@@ -80,9 +84,10 @@
             </select>
           </div>
           <div class="field"><label>お問い合わせ内容 <span class="req">必須</span></label><textarea name="message" placeholder="ご相談内容をご記入ください。" required></textarea></div>
-          <label class="consent"><input type="checkbox" required><span><a href="#" class="tlink" style="display:inline">プライバシーポリシー</a>に同意のうえ送信します。</span></label>
+          <label class="consent"><input type="checkbox" name="consent" value="true" required><span><a href="#" class="tlink" style="display:inline">プライバシーポリシー</a>に同意のうえ送信します。</span></label>
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">送信する<span class="arr">→</span></button>
-          <p class="muted" style="font-size:.76rem;text-align:center;margin-top:16px;font-family:var(--sans)">※ こちらはデモ用フォームです。実際には送信されません。</p>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <p class="muted" style="font-size:.76rem;text-align:center;margin-top:12px;font-family:var(--sans)">送信内容は担当者へ通知され、2〜3営業日以内に返信します。</p>
         </div>
         <div class="form-done">
           <div class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div>

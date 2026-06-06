@@ -4,3 +4,8 @@
 uploads/
 assets/hero-medixus-os.png
 .vercel
+node_modules/
+.env
+.env.local
+.env.development
+.env.production
