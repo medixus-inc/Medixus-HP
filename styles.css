@@ -537,6 +537,8 @@ p:last-child { margin-bottom: 0; }
 /* ---- Why cards (recruit) ---- */
 .why .pcard .ic { width:46px; height:46px; border-radius:12px; background: var(--grad-soft); border:1px solid var(--line); display:flex; align-items:center; justify-content:center; color: var(--brand-deep); margin-bottom:18px; }
 .why .pcard .ic svg { width:23px; height:23px; }
+.why .pcard h3 { font-size: clamp(1rem, 1.1vw, 1.18rem); letter-spacing: 0; white-space: nowrap; }
+@media (max-width: 760px){ .why .pcard h3 { white-space: normal; } }
 
 /* ---- Jobs ---- */
 .jobs { border-top:1px solid var(--line); }
