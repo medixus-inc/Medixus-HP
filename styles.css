@@ -219,6 +219,11 @@ p:last-child { margin-bottom: 0; }
 .sec-head.center { margin: 0 auto; text-align: center; }
 .sec-head .eyebrow { margin-bottom: 24px; }
 .sec-head h2 { margin-bottom: 22px; }
+.business-head { max-width: none; }
+.business-heading { white-space: nowrap; }
+@media (max-width: 720px){
+  .business-heading { white-space: normal; }
+}
 
 /* ---------- Grid ---------- */
 .grid { display: grid; gap: 24px; }
