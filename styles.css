@@ -405,6 +405,9 @@ p:last-child { margin-bottom: 0; }
 .cta .inner { position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; gap:42px; flex-wrap: wrap; }
 .cta h2 { font-size: clamp(1.7rem,3.3vw,2.7rem); letter-spacing:.04em; line-height:1.46; }
 .cta p { color:#a9b8d4; margin-top: 16px; max-width: 44ch; font-family: var(--serif); }
+.home-cta-lead { max-width: none; }
+.home-cta-lead span { white-space: nowrap; }
+@media (max-width: 760px){ .home-cta-lead span { white-space: normal; } }
 
 /* ---- Problem cards ---- */
 .pcard { background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-xl); padding: 38px 34px; transition: transform .5s var(--ease), box-shadow .5s var(--ease), border-color .5s; }
