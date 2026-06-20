@@ -407,6 +407,8 @@ p:last-child { margin-bottom: 0; }
 .pcard .n { font-family: var(--display); font-style: italic; font-size: 1.3rem; color: var(--brand); }
 .pcard h3 { margin: 16px 0 13px; }
 .pcard p { color: var(--muted); font-size: .94rem; line-height: 1.95; font-family: var(--sans); }
+.solution-cards .pcard h3 { font-size: clamp(1.16rem, 1.45vw, 1.35rem); letter-spacing: 0; white-space: nowrap; }
+@media (max-width: 920px){ .solution-cards .pcard h3 { white-space: normal; } }
 
 /* ---- Index list (numbered rows) ---- */
 .idx { border-top: 1px solid var(--line); }
