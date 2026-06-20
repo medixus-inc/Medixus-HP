@@ -401,8 +401,8 @@ p:last-child { margin-bottom: 0; }
 
 /* ---- CTA band ---- */
 .cta { position: relative; overflow: hidden; background: var(--navy); color:#fff; }
-.cta::after { content:""; position:absolute; right:-8%; top:-40%; width:56%; height:180%; background: var(--grad); opacity:.15; filter: blur(46px); border-radius:50%; }
-.cta .inner { position:relative; display:flex; align-items:center; justify-content:space-between; gap:42px; flex-wrap: wrap; }
+.cta::after { content:""; position:absolute; right:-8%; top:-40%; width:56%; height:180%; background: var(--grad); opacity:.15; filter: blur(46px); border-radius:50%; pointer-events:none; z-index:0; }
+.cta .inner { position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; gap:42px; flex-wrap: wrap; }
 .cta h2 { font-size: clamp(1.7rem,3.3vw,2.7rem); letter-spacing:.04em; line-height:1.46; }
 .cta p { color:#a9b8d4; margin-top: 16px; max-width: 44ch; font-family: var(--serif); }
 
