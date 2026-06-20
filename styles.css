@@ -597,6 +597,9 @@ p:last-child { margin-bottom: 0; }
 .legal-doc dt, .legal-doc dd { margin:0; padding: 14px 0; border-top:1px solid var(--line-2); }
 .legal-doc dt { color: var(--brand-deep); font-family: var(--sans); font-size:.82rem; font-weight:600; letter-spacing:.06em; padding-right: 24px; }
 .legal-doc dt:first-of-type, .legal-doc dd:first-of-type { border-top:0; }
+.news-article-meta { display:flex; gap:14px; align-items:center; flex-wrap:wrap; margin-bottom: 22px; font-family: var(--sans); color: var(--muted); font-size:.9rem; letter-spacing:.04em; }
+.news-article-tag { color: var(--brand-deep); border:1px solid var(--line); border-radius:999px; padding: 5px 16px; font-size:.72rem; font-weight:600; letter-spacing:.12em; }
+.news-nav { display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; margin-top: 34px; }
 @media(max-width:860px){
   .legal-layout { grid-template-columns:1fr; }
   .legal-side { position:static; }
