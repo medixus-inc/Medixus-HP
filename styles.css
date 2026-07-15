@@ -610,3 +610,25 @@ p:last-child { margin-bottom: 0; }
   .legal-doc dd { padding-top: 0; border-top:0; }
   .legal-doc dt:first-of-type { border-top:0; }
 }
+
+/* ── DEMO (仮想受診デモ) ─────────────────────────── */
+.section.demo { background: linear-gradient(180deg, var(--brand-tint) 0%, #f4f9ff 60%, #fff 100%); }
+.demo-flow { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:34px;
+  font-family: var(--sans); font-size:.82rem; font-weight:600; letter-spacing:.06em; color: var(--ink); }
+.demo-flow span { background:#fff; border:1px solid rgba(32,112,207,.25); border-radius:999px; padding:8px 16px;
+  box-shadow: 0 8px 20px -14px rgba(24,87,159,.35); white-space:nowrap; }
+.demo-flow i { width:16px; height:1.5px; background: var(--brand); opacity:.5; flex:0 0 auto; }
+.demo-flow .hl { background: var(--brand); color:#fff; border-color: var(--brand); }
+.demo-personas { display:grid; grid-template-columns: repeat(4,1fr); gap:16px; margin-top:38px; }
+@media (max-width:1080px){ .demo-personas { grid-template-columns: repeat(2,1fr); } }
+@media (max-width:560px){ .demo-personas { grid-template-columns: 1fr; } }
+.demo-card { background:#fff; border:1px solid rgba(24,87,159,.14); border-radius:14px; padding:22px 22px 20px;
+  box-shadow: 0 18px 40px -30px rgba(24,87,159,.4); }
+.demo-card .who { display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+.demo-card .dot { width:11px; height:11px; border-radius:999px; flex:0 0 auto; }
+.demo-card .name { font-family: var(--display); font-size:1.02rem; font-weight:700; letter-spacing:.03em; }
+.demo-card .meta { font-family: var(--sans); font-size:.72rem; color: var(--faint); letter-spacing:.04em; }
+.demo-card .sym { font-family: var(--sans); font-size:.78rem; font-weight:600; color: var(--brand-deep);
+  background: var(--brand-tint); border-radius:999px; padding:5px 12px; display:inline-block; margin-bottom:12px; }
+.demo-card p { font-size:.88rem; line-height:1.85; color: var(--muted); margin:0; }
+.demo-note { font-family: var(--sans); font-size:.76rem; color: var(--faint); letter-spacing:.04em; }
