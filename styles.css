@@ -619,7 +619,8 @@ p:last-child { margin-bottom: 0; }
   box-shadow: 0 8px 20px -14px rgba(24,87,159,.35); white-space:nowrap; }
 .demo-flow i { width:16px; height:1.5px; background: var(--brand); opacity:.5; flex:0 0 auto; }
 .demo-flow .hl { background: var(--brand); color:#fff; border-color: var(--brand); }
-.demo-personas { display:grid; grid-template-columns: repeat(4,1fr); gap:16px; margin-top:38px; }
+.demo-personas { display:grid; grid-template-columns: repeat(5,1fr); gap:14px; margin-top:38px; }
+@media (max-width:1180px){ .demo-personas { grid-template-columns: repeat(3,1fr); } }
 @media (max-width:1080px){ .demo-personas { grid-template-columns: repeat(2,1fr); } }
 @media (max-width:560px){ .demo-personas { grid-template-columns: 1fr; } }
 .demo-card { background:#fff; border:1px solid rgba(24,87,159,.14); border-radius:14px; padding:22px 22px 20px;
